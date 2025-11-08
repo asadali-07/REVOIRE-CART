@@ -24,7 +24,7 @@ export const addItemToCart = async (req, res) => {
     const { productId, qty = 1 } = req.body;
     const userId = req.user.id;
     try {
-        const product = await axios.get(`http://localhost:3001/api/products/${productId}`, {
+        const product = await axios.get(`https://revoire-product.onrender.com/api/products/${productId}`, {
             headers: {
                 Authorization: `Bearer ${req.cookies.token}`
             }

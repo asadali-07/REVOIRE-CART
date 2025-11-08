@@ -6,7 +6,7 @@ export const toggleWishlist = async (req, res) => {
         const userId = req.user.id;
         const { productId } = req.body;
 
-        const product = await axios.get(`http://localhost:3001/api/products/${productId}`, {
+        const product = await axios.get(`https://revoire-product.onrender.com/api/products/${productId}`, {
             headers: {
                 Authorization: `Bearer ${req.cookies.token}`
             }
